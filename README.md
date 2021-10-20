@@ -1,8 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) Image component benchmark.
+
+## What do it consists in?
+It helps to understand how fast the Image component loads images depending on their initial size, location and so on...
+Here is the test list:
+- Compare loading time depending on initial size
+- Compare loading time when there are multiple images loading in parallel
+- Compare loading time for the same image hosted in the project's public folder and on a remote hosting system
+- Depending on layouts (TODO)
+- Compare loading time when hosted on different platforms (Vercel, VPS, ...)
+
 
 ## Getting Started
 
-First, run the development server:
+1. First, run the development server:
 
 ```bash
 npm run dev
@@ -10,22 +20,13 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+3. You'll see the links to the different tests. Click on one of those links.
+4. Once the test page loaded, open the browser's Network dev tools
+5. Filter on img requests, clear the console
+6. Finally, scroll down to see the images loading
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 

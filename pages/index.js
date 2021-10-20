@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -13,43 +14,35 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Next.js</a> Image Benchmark!
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+        <h2>What do it consists in?</h2>
+
+        <p>
+          It helps to understand how fast the Image component loads images depending on their initial size, location and so on...
+          Here is the test list:
         </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <ol>
+          <li>
+            <Link href="/initial-size">
+              <a style={{ color: '#0070f3' }}>Compare loading time depending on initial size</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/parallel-loading">
+              <a style={{ color: '#0070f3' }}>Compare loading time when there are multiple images loading in parallel</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/remote-vs-local">
+              <a style={{ color: '#0070f3' }}>Compare loading time for the same image hosted in the project's public folder and on a remote hosting system</a>
+            </Link>
+          </li>
+          <li>Depending on layouts (TODO)</li>
+          <li>Compare loading time when hosted on different platforms (Vercel, self hosted, ...)</li>
+        </ol>
       </main>
 
       <footer className={styles.footer}>
